@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BCD343A-3B84-4CA3-A575-7151BC4F7BEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Net3Migrations</RootNamespace>
+    <AssemblyName>Net3Migrations</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_30</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_30</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Concurrent\ConcurrentDictionary.cs" />
+    <Compile Include="Collections\Concurrent\ConcurrentQueue.cs" />
+    <Compile Include="Collections\Concurrent\IProducerConsumerCollection.cs" />
+    <Compile Include="Collections\Concurrent\SplitOrderedList.cs" />
+    <Compile Include="Delegates\LinqLikeDelegates.cs" />
+    <Compile Include="ExtensionAttribute.cs" />
+    <Compile Include="Operators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\IO\Path.cs" />
+    <Compile Include="System\Lazy.cs" />
+    <Compile Include="System\Web\HttpUtitlity.cs" />
+    <Compile Include="System\Web\IHtmlString.cs" />
+    <Compile Include="System\Web\Util\Helpers.cs" />
+    <Compile Include="System\Web\Util\HttpEncoder.cs" />
+    <Compile Include="Threading\SpinWait.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
